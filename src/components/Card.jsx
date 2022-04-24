@@ -4,7 +4,7 @@ const Card = (props) => {
         <div className="card__body">
             <span className="card__text-word">{props.word}</span>
             <span className="card__text">{props.transcript}</span>
-            <span className="card__text">{props.translate}</span>
+            <span className="card__text">{props.translation}</span>
             <span className="card__text">{props.category}</span>
         </div>
     )
