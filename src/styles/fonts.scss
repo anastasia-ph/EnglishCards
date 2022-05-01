@@ -1,0 +1,29 @@
+ 
+@import "./colors.scss";
+.header-font{
+    font: 1rem "Verdana", sans-serif;
+    color: $provincialPink;
+    text-transform: uppercase;
+}
+.table-font-header{
+    font: 1.1rem "Verdana", sans-serif;
+    color: $black;
+    text-transform: uppercase;
+}
+.table-font-text{
+    font: 1rem "Verdana", sans-serif;
+    color: $black;
+    text-transform: lowercase;
+    @media screen and (max-width:480px) {
+        font: 10px "Verdana", sans-serif;
+    }
+}
+.card__main-font{
+    font: 2rem "Verdana", sans-serif;
+    color: $provincialPink;
+    text-transform: uppercase;
+}
+.card__small-font{
+    font: 1.5rem "Verdana", sans-serif;
+    color: $provincialPink
+}

@@ -1,0 +1,49 @@
+@import "./colors.scss";
+.pagination__container{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width:900px){
+      height: 15vh;
+    }
+
+}
+.pagination__block{
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  height: 40px;
+  align-self: center;
+  justify-content: space-between;
+  bottom: 0;
+
+  @media screen and (max-width:900px){
+    height: 100%;
+    width: 50vw;
+  }
+  @media screen and (max-width:480px){
+    height: 100%;
+    width: 70vw;
+  }
+}
+.pagination__button{
+  width: 40px;
+  height: 40px;
+  background-color: $paginationColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color:$black;
+  cursor: pointer;
+  &:active{
+    -moz-box-shadow:inset 0 0 6px #686767;
+   -webkit-box-shadow: inset 0 0 6px #686767;
+   box-shadow: inset 0 0 6px #686767;
+  }
+  @media screen and (max-width:900px){
+    width: 70px;
+    height: 70px;
+  }
+
+}

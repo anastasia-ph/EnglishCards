@@ -1,0 +1,30 @@
+@import "./colors.scss";
+
+.edit-button{
+    width:30px;
+    height:30px;
+    background-color:$editYellow;
+    border-radius: 5px;
+    font: 23px Verdana, sans-serif;
+    text-align:center;
+    margin: 0 10px 0 10px;
+
+}
+.save-button{
+    width:30px;
+    height:30px;
+    background-color:$acceptGreen;
+    border-radius: 5px;
+    font: 23px Verdana, sans-serif;
+    text-align:center;
+    margin: 0 10px 0 10px;
+}
+.delete-button{
+    width:30px;
+    height:30px;
+    background-color:$declineRed;
+    border-radius: 5px;
+    font: 23px Verdana, sans-serif;
+    text-align:center;
+
+}

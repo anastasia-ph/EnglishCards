@@ -1,0 +1,12 @@
+@import "./../src/styles/colors.scss";
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $sandyBrown;
+  cursor: default;
+  -webkit-user-select: none;  
+  -moz-user-select: none;     
+  -ms-user-select: none;   
+  user-select: none;
+}

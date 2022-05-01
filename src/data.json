@@ -1,0 +1,31 @@
+[{
+    "word":"hoodie",
+    "transcript":"ho͝odē",
+    "translate":"худи",
+    "category":"clothes"
+},
+{
+    "word":"raincoat",
+    "transcript":"rānˌkōt",
+    "translate":"дождевик",
+    "category":"clothes"
+},
+{
+    "word":"Judge ",
+    "transcript":"jəj",
+    "translate":"судья",
+    "category":"professions"
+},
+{
+    "word":"bellflower",
+    "transcript":"belˌflou(ə)r",
+    "translate":"колокольчик",
+    "category":"flowers, nature"
+},
+{
+    "word":"drapery",
+    "transcript":"drāp(ə)rē",
+    "translate":"драпировка",
+    "category":"furniture"
+}
+]
