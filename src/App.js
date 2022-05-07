@@ -13,7 +13,6 @@ import React, { useState } from 'react';
 import data from "./data.json"
 import Pagination from "./components/Pagination"
 import PaginationContainer from "./components/PaginationContainer"
-import { act } from "react-dom/test-utils"
 
 
 
@@ -24,31 +23,42 @@ function App() {
   const handleClick = (button) => {
       setButton(button);
   };
+
+  const [page, setPage] = useState("table")
+  const handleClickPage = (event) => {
+    setPage(event.target.dataset.name)
+    console.log(page)
+  }
   return (
     <div className='App'>
     <Header>
-      <p className="header-font header__menu-block">Таблица слов</p>
-      <p className="header-font header__menu-block">Карточки</p>
+      <p data-name="table" className="header-font header__menu-block" onClick={handleClickPage}>Таблица слов</p>
+      <p data-name="card" className="header-font header__menu-block" onClick={handleClickPage}>Карточки</p>
     </Header>
-    <TableContainerPage>
+
+    {page === "table" ?  
+    <React.Fragment><TableContainerPage>
       <Table>
-      <TableData Header word="Word" transcript="Transcript" translation="Translation" category="Category"></TableData>
+      <TableData Header word="Word" key="header" transcript="Transcript" translation="Translation" category="Category"></TableData>
       {data.map((item)=>
-      <TableData word={item.word} transcript={item.transcript} translation={item.translate} category={item.category} 
+      <TableData word={item.word} key={item.word} transcript={item.transcript} translation={item.translate} category={item.category} 
       isSelected={item.word === button} onClick={handleClick}></TableData>)}
     </Table>
 
     </TableContainerPage>
     <PaginationContainer>
       <Pagination></Pagination>
-      </PaginationContainer>
-
-    {/* <CardContainer>
+      </PaginationContainer> 
+      </React.Fragment>: 
+    <React.Fragment><CardContainer>
     <Card word={data[0].word} transcript={data[0].transcript} translation={data[0].translate} category={data[0].category}></Card>
     </CardContainer>
     <PaginationContainer>
       <Pagination></Pagination>
-      </PaginationContainer> */}
+      </PaginationContainer>
+    </React.Fragment>}
+   
+
     
     <Footer></Footer>
     </div>
