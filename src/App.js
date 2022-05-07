@@ -9,15 +9,21 @@ import TableContainerPage from "./components/TableContainerPage"
 import TableData from "./components/TableData"
 import CardContainer from './components/CardsContainer';
 import Card from './components/Card'
-import React from 'react';
+import React, { useState } from 'react';
 import data from "./data.json"
 import Pagination from "./components/Pagination"
 import PaginationContainer from "./components/PaginationContainer"
+import { act } from "react-dom/test-utils"
 
 
 
 
 function App() {
+  const [button, setButton] = useState();
+
+  const handleClick = (button) => {
+      setButton(button);
+  };
   return (
     <div className='App'>
     <Header>
@@ -28,7 +34,8 @@ function App() {
       <Table>
       <TableData Header word="Word" transcript="Transcript" translation="Translation" category="Category"></TableData>
       {data.map((item)=>
-      <TableData word={item.word} transcript={item.transcript} translation={item.translate} category={item.category}></TableData>)}
+      <TableData word={item.word} transcript={item.transcript} translation={item.translate} category={item.category} 
+      isSelected={item.word === button} onClick={handleClick}></TableData>)}
     </Table>
 
     </TableContainerPage>

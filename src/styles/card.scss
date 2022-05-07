@@ -27,3 +27,15 @@
 .card_bottom-margin{
     margin-bottom: 5%;
 }
+.block_size{
+  height: 40px;
+}
+.card__translation_button{
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: $cascade;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
