@@ -15,10 +15,10 @@ const TableData = (props) => {
         props.onClick(props.word);
     };
     const handleSave = () => {
-        handleClick2()
+        handleClickRevert()
         handleClickSaved()
     }
-    const handleClick2 = () => {
+    const handleClickRevert = () => {
         props.onClick("")
 
     }
